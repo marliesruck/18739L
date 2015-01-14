@@ -1,0 +1,17 @@
+*** Towers of Toast ***
+
+* Tips *
+- they give you the src, so there answer is there (as opposed to being on
+  a server and needing to coerce it out)
+
+Method 1:
+- understand the prime factorization going on
+- multiply the first 40 primes in wolfram-alpha
+- one tower is this product, the other two towers are 1
+
+Method 2:
+- change the source code to generate a game that wins
+- select 'new' and then instead of randomly distributing the discs 
+  modify the code to only distribute them to one tower 
+
+
