@@ -1,0 +1,31 @@
+Marlies Ruck (mruck)
+
+CTF Problem 1
+
+Area: binary exploit 
+Skill level: beginner/intermediate
+Knowledge required: buffer overflows with format strings
+
+Resources:
+'Format String Vulnerabilities', 2001. [Online]. Available: 
+https://crypto.stanford.edu/cs155/papers/formatstring-1.2.pdf. 
+[Accessed: 12- Feb- 2015].
+
+Problem setup: 
+Daedelus IT recommends Bftpd to employees- it is a secure, easy to set up 
+server that people can use at home.  Police discovered your dad running
+Bftpd at your house, can you help us login? 
+
+Solution
+Provide a username that consists of:
+  <shell code> 
++ "%<padding>x"    // Junk for syslog and ebp
++ <&syslog>>	   // Return to the shell code
+
+Concept being taught:
+This problem highlights the power of format strings.  Although the buffer size
+is fixed, the student can take advantage of sprintf and abuse format 
+strings.  The problem forces the student to create a string that is less than
+64 characters, but when interpreted by sprintf, overflows the buffer. 
+
+
